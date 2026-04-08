@@ -18,12 +18,18 @@
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"
-        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet"
-        type="text/css" />
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"
+            type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap"
+            rel="stylesheet" type="text/css" />
+    </noscript>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -59,7 +65,7 @@
                 </ul>
 
                 <!-- Language Selector -->
-                <select id="languageSelect"
+                <select id="languageSelect" aria-label="Select Language"
                     class="form-select form-select-sm bg-primary text-white border-0 w-auto ms-3">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
@@ -72,7 +78,7 @@
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/profile.png" alt="..." />
+            <img class="masthead-avatar mb-5" src="assets/img/profile.png" alt="..." fetchpriority="high" />
             <!-- Masthead Heading-->
             <h1 class="masthead-heading text-uppercase mb-0">Miguel A. Segura B.</h1>
             <!-- Icon Divider-->
@@ -88,268 +94,275 @@
         </div>
     </header>
 
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
-                data-translate="navbar_portfolio">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
-                        data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-
-                        <img class="img-fluid" loading="lazy" src="assets/img/portfolio/TodoApiSwagger.png" alt="..." />
-                    </div>
+    <main>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
+                    data-translate="navbar_portfolio">Portfolio</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
-                        data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
+                            data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
                             </div>
-                        </div>
 
-                        <img class="img-fluid" loading="lazy" src="assets/img/portfolio/ygogrpc.png" alt="..." />
+                            <img class="img-fluid" loading="lazy" src="assets/img/portfolio/TodoApiSwagger.png"
+                                alt="..." />
+                        </div>
                     </div>
-                </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
-                        data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
+                            data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
                             </div>
-                        </div>
 
-                        <img class="img-fluid" loading="lazy" src="assets/img/portfolio/Shortys.png" alt="..." />
+                            <img class="img-fluid" loading="lazy" src="assets/img/portfolio/ygogrpc.png" alt="..." />
+                        </div>
                     </div>
-                </div>
-            </div>
-    </section>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto border border-2 border-primary rounded overflow-hidden"
+                            data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
 
-    <section class="page-section" id="experience">
-        <div class="container">
-            <!-- Section Heading -->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
-                data-translate="experience_title">Experience</h2>
-            <div class="divider-custom mb-4">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-
-            <!-- Experience Rows -->
-            <div class="row">
-                <!-- Frontend Development -->
-                <div class="col-lg-6 mb-4">
-                    <h3 class="text-center text-uppercase mb-3" data-translate="experience_frontend_title">Frontend
-                        Development</h3>
-                    <div class="row g-3">
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/html5-original-wordmark.svg" alt="HTML" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_html">HTML</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
-                            </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/css3-original-wordmark.svg" alt="CSS" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_css">CSS</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
-                            </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/javascript-original.svg" alt="JavaScript" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_javascript">JavaScript</h5>
-                                <small data-translate="experience_basic">Basic</small>
-                            </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/bootstrap.png" alt="Bootstrap" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_bootstrap">Bootstrap</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
-                            </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/aspnetcore.png" alt="Razor Pages" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_razor">Razor Pages</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
-                            </div>
+                            <img class="img-fluid" loading="lazy" src="assets/img/portfolio/Shortys.png" alt="..." />
                         </div>
                     </div>
                 </div>
+        </section>
 
-                <!-- Backend Development -->
-                <div class="col-lg-6 mb-4">
-                    <h3 class="text-center text-uppercase mb-3" data-translate="experience_backend_title">Backend
-                        Development</h3>
-                    <div class="row g-3">
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/sqlserver.svg" alt="T-SQL" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_tsql">T-SQL</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
+        <section class="page-section" id="experience">
+            <div class="container">
+                <!-- Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
+                    data-translate="experience_title">Experience</h2>
+                <div class="divider-custom mb-4">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Experience Rows -->
+                <div class="row">
+                    <!-- Frontend Development -->
+                    <div class="col-lg-6 mb-4">
+                        <h3 class="text-center text-uppercase mb-3" data-translate="experience_frontend_title">Frontend
+                            Development</h3>
+                        <div class="row g-3">
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/html5-original-wordmark.svg" alt="HTML"
+                                    class="me-2" style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_html">HTML</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/css3-original-wordmark.svg" alt="CSS" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_css">CSS</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/javascript-original.svg" alt="JavaScript"
+                                    class="me-2" style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_javascript">JavaScript</h4>
+                                    <small data-translate="experience_basic">Basic</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/bootstrap.png" alt="Bootstrap" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_bootstrap">Bootstrap</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/aspnetcore.png" alt="Razor Pages" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_razor">Razor Pages</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/dot-net-original-wordmark.svg" alt=".Net" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_dotnet">.Net</h5>
-                                <small data-translate="experience_experienced">Experienced</small>
+                    </div>
+
+                    <!-- Backend Development -->
+                    <div class="col-lg-6 mb-4">
+                        <h3 class="text-center text-uppercase mb-3" data-translate="experience_backend_title">Backend
+                            Development</h3>
+                        <div class="row g-3">
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/sqlserver.svg" alt="T-SQL" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_tsql">T-SQL</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/csharp-original.svg" alt="C#" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_csharp">C#</h5>
-                                <small data-translate="experience_experienced">Experienced</small>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/dot-net-original-wordmark.svg" alt=".Net"
+                                    class="me-2" style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_dotnet">.Net</h4>
+                                    <small data-translate="experience_experienced">Experienced</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/git.svg" alt="Git" class="me-2" style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_git">Git</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/csharp-original.svg" alt="C#" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_csharp">C#</h4>
+                                    <small data-translate="experience_experienced">Experienced</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/graphql.svg" alt="GraphQL" class="me-2"
-                                style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_graphql">GraphQL</h5>
-                                <small data-translate="experience_intermediate">Intermediate</small>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/git.svg" alt="Git" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_git">Git</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <img loading="lazy" src="./assets/img/grpc.png" alt="gRPC" class="me-2" style="width:40px;">
-                            <div>
-                                <h5 class="mb-0" data-translate="experience_grpc">gRPC</h5>
-                                <small data-translate="experience_basic">Basic</small>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/graphql.svg" alt="GraphQL" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_graphql">GraphQL</h4>
+                                    <small data-translate="experience_intermediate">Intermediate</small>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <img loading="lazy" src="./assets/img/grpc.png" alt="gRPC" class="me-2"
+                                    style="width:40px;">
+                                <div>
+                                    <h4 class="mb-0" data-translate="experience_grpc">gRPC</h4>
+                                    <small data-translate="experience_basic">Basic</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- About Section-->
-    <section class="page-section" id="about">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
-                data-translate="about_heading">About</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- About Section Content-->
-            <div class="row">
-                <div class="col-lg-4 ms-auto">
-                    <p class="lead" data-translate="about_paragraph_1">
-                        Skilled in designing and implementing RESTful APIs, GraphQL endpoints, and gRPC services to
-                        build scalable and maintainable solutions.
+        <!-- About Section-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
+                    data-translate="about_heading">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
-                <div class="col-lg-4 me-auto">
-                    <p class="lead" data-translate="about_paragraph_2">
-                        On the frontend side, I work with Razor Pages, Blazor, and core web technologies like HTML, CSS,
-                        and JavaScript to create web applications.
-                    </p>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto">
+                        <p class="lead" data-translate="about_paragraph_1">
+                            Skilled in designing and implementing RESTful APIs, GraphQL endpoints, and gRPC services to
+                            build scalable and maintainable solutions.
+                    </div>
+                    <div class="col-lg-4 me-auto">
+                        <p class="lead" data-translate="about_paragraph_2">
+                            On the frontend side, I work with Razor Pages, Blazor, and core web technologies like HTML,
+                            CSS,
+                            and JavaScript to create web applications.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <!-- About Section Button-->
-            <div class="text-center mt-4">
-                <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <!-- CV en inglés -->
-                    <a class="btn btn-xl btn-outline-primary" href="assets/CV-H-MiguelSegura-US.pdf" download
-                        data-translate="about_download_en">
-                        <i class="fas fa-download me-2"></i>
-                        Download CV (EN)
-                    </a>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <!-- CV en inglés -->
+                        <a class="btn btn-xl btn-outline-primary" href="assets/CV-H-MiguelSegura-US.pdf" download
+                            data-translate="about_download_en">
+                            <i class="fas fa-download me-2"></i>
+                            Download CV (EN)
+                        </a>
 
-                    <!-- CV en español -->
-                    <a class="btn btn-xl btn-outline-primary" href="assets/CV-MiguelSegura.pdf" download
-                        data-translate="about_download_es">
-                        <i class="fas fa-download me-2"></i>
-                        Descargar CV (ES)
-                    </a>
+                        <!-- CV en español -->
+                        <a class="btn btn-xl btn-outline-primary" href="assets/CV-MiguelSegura.pdf" download
+                            data-translate="about_download_es">
+                            <i class="fas fa-download me-2"></i>
+                            Descargar CV (ES)
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="text-center mt-2">
-                <a class="btn btn-xl btn-outline-primary" href="https://github.com/MiguelBrav" target="_blank"
-                    data-translate="about_github">
-                    <i class="fab fa-github me-2"></i>
-                    GitHub Profile
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="page-section" id="contact">
-        <div class="container">
-            <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
-                data-translate="navbar_contact">Contact Me</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-
-            <!-- Contact Buttons -->
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-4 text-center mb-3">
-                    <a href="mailto:miguelangelsegurabravo@gmail.com" class="btn btn-outline-primary btn-lg">
-                        <i class="fas fa-envelope me-2"></i> Email
-                    </a>
-                </div>
-                <div class="col-lg-4 text-center mb-3">
-                    <a href="https://www.linkedin.com/in/miguelangel-segurabravo/" target="_blank"
-                        class="btn btn-outline-primary btn-lg">
-                        <i class="fab fa-linkedin me-2"></i> LinkedIn
+                <div class="text-center mt-2">
+                    <a class="btn btn-xl btn-outline-primary" href="https://github.com/MiguelBrav" target="_blank"
+                        data-translate="about_github">
+                        <i class="fab fa-github me-2"></i>
+                        GitHub Profile
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"
+                    data-translate="navbar_contact">Contact Me</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+                <!-- Contact Buttons -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-4 text-center mb-3">
+                        <a href="mailto:miguelangelsegurabravo@gmail.com" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-envelope me-2"></i> Email
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center mb-3">
+                        <a href="https://www.linkedin.com/in/miguelangel-segurabravo/" target="_blank"
+                            class="btn btn-outline-primary btn-lg">
+                            <i class="fab fa-linkedin me-2"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer text-center bg-secondary text-white py-4">
